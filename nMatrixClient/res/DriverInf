@@ -1,0 +1,103 @@
+;-------------------------------------------------------------------------------
+; NMATRIX.INF
+;
+; nMatrix Virtual Ethernet Adapter
+;
+; Copyright (c) DigiStar Studio.  All rights reserved.
+
+
+[version]
+Signature   = "$Windows NT$"
+Class       = Net
+ClassGUID   = {4d36e972-e325-11ce-bfc1-08002be10318}
+Provider    = %Msft%
+DriverVer   = 10/04/2013,0.9.565.0
+CatalogFile = nMatrix.cat
+
+[Manufacturer]
+%Msft% = Msft,NTx86,NTia64,NTamd64
+
+;For Win2k
+
+[Msft]
+%nMatrix.DeviceDesc%    = nMatrix.ndi, nMatrix
+
+;For WinXP and later
+
+[Msft.NTx86]
+%nMatrix.DeviceDesc%    = nMatrix.ndi, nMatrix
+
+[Msft.NTia64]
+%nMatrix.DeviceDesc%    = nMatrix.ndi, nMatrix
+
+[Msft.NTamd64]
+%nMatrix.DeviceDesc%    = nMatrix.ndi, nMatrix
+
+;-------------------------------------------------------------------------------
+; Virtual Ethernet Adapter
+
+[nMatrix.ndi]
+Characteristics = 0x1 ; NCF_VIRTUAL
+AddReg          = nMatrix.Reg
+CopyFiles       = nMatrix.CopyFiles
+
+[nMatrix.ndi.Services]
+AddService      = nmatrix, 2, nMatrix.Service, nMatrix.EventLog
+
+;-----------------------------------------------------------------------------
+; Virtual Miniport Common
+
+[nMatrix.Reg]
+HKR,    ,                         vip,        0x00010001, "16843014"
+HKR, Ndi,                         Service,             0, "nmatrix"
+HKR, Ndi\Interfaces,              UpperRange,          0, "ndis5"
+HKR, Ndi\Interfaces,              LowerRange,          0, "ethernet"
+
+HKR, Ndi\Params\NetworkAddress, ParamDesc,    0, "MAC address"
+HKR, Ndi\Params\NetworkAddress, Type,         0, "edit"
+HKR, Ndi\Params\NetworkAddress, Optional,     0, "1"
+
+
+;-----------------------------------------------------------------------------
+; Driver and Service Section
+
+[nMatrix.Service]
+DisplayName     = %nMatrix.Service.DispName%
+ServiceType     = 1 ;%SERVICE_KERNEL_DRIVER%
+StartType       = 3 ;%SERVICE_DEMAND_START%
+ErrorControl    = 1 ;%SERVICE_ERROR_NORMAL%
+ServiceBinary   = %12%\nMatrix.sys
+LoadOrderGroup  = NDIS
+AddReg          = TextModeFlags.Reg
+
+[nMatrix.EventLog]
+AddReg = nMatrix.AddEventLog.Reg
+
+[nMatrix.AddEventLog.Reg]
+HKR, , EventMessageFile, 0x00020000, "%%SystemRoot%%\System32\netevent.dll"
+HKR, , TypesSupported,   0x00010001, 7
+
+[TextModeFlags.Reg]
+HKR, , TextModeFlags, 0x00010001, 0x0001
+
+[nMatrix.CopyFiles]
+nMatrix.sys,,,2
+
+[SourceDisksNames]
+1 = %DiskId1%,,,""
+
+[SourceDisksFiles]
+nMatrix.sys  = 1,,
+
+[DestinationDirs]
+nMatrix.CopyFiles = 12
+
+;-----------------------------------------------------------------------------
+; Localizable Strings
+
+[Strings]
+Msft                      = "DigiStar Studio"
+nMatrix.DeviceDesc        = "nMatrix VPN Interface"
+nMatrix.Service.DispName  = "nMatrix Virtual Miniport"
+DiskId1 = "Virtual Miniport Device Installation Disk #1"
+

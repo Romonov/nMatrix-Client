@@ -1,0 +1,979 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Taiwan) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\VPNClient.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\nMatrixClient.ico"
+IDI_ICON1               ICON                    "res\\01.ico"
+IDI_ICON2               ICON                    "res\\02.ico"
+IDI_ICON3               ICON                    "res\\03.ico"
+IDI_ICON4               ICON                    "res\\04.ico"
+IDI_SETUP               ICON                    "res\\Setup.ico"
+IDI_BASIC               ICON                    "res\\basic.ico"
+IDI_BANDWIDTH           ICON                    "res\\bandwidth.ico"
+IDI_ICON1L              ICON                    "res\\01L.ico"
+IDI_ICON4L              ICON                    "res\\04L.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CREATE_SUBNET DIALOGEX 0, 0, 260, 130
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC,15,10,225,85
+    LTEXT           "text",IDC_NETWORK_ID,30,35,65,10
+    EDITTEXT        IDC_NETNAME,100,32,125,14,ES_AUTOHSCROLL
+    LTEXT           "text",IDC_NETWORK_PASSWORD,30,65,65,10
+    EDITTEXT        IDC_PASSWORD,100,62,125,14,ES_AUTOHSCROLL
+    LTEXT           "text",IDC_TYPE,15,107,35,10,0,WS_EX_RIGHT
+    COMBOBOX        IDC_NETWORK_TYPE,57,105,70,14,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "",IDOK,141,105,50,14
+    PUSHBUTTON      "",IDCANCEL,191,105,50,14
+END
+
+IDD_JOIN_SUBNET DIALOGEX 0, 0, 260, 130
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_NETNAME,100,32,125,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD,100,62,125,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "",IDOK,141,105,50,14
+    PUSHBUTTON      "",IDCANCEL,191,105,50,14
+    GROUPBOX        "",IDC_STATIC,15,10,225,85
+    LTEXT           "text",IDC_NETWORK_ID,30,35,65,10
+    LTEXT           "text",IDC_NETWORK_PASSWORD,30,65,65,10
+END
+
+IDD_CHAT DIALOGEX 0, 0, 340, 225
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Chat"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_CHAT_EDIT,16,122,229,60,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | WS_VSCROLL
+    PUSHBUTTON      "Send",IDC_SEND,72,189,40,16,NOT WS_VISIBLE
+    LISTBOX         IDC_USER_LIST,254,18,55,98,LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_HISTORY,"RichEdit20W",ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP,49,30,140,64,WS_EX_STATICEDGE
+END
+
+IDD_HOSTINFODIALOG DIALOGEX 0, 0, 235, 180
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Host Information"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "",IDC_STATIC,17,12,200,65
+    LTEXT           "text",IDC_S_HOST_NAME,35,27,50,8
+    LTEXT           "text",IDC_HOSTNAME,100,27,90,8
+    LTEXT           "text",IDC_S_VIRTUAL_IP,35,42,50,8
+    LTEXT           "text",IDC_VIP,100,42,90,8
+    LTEXT           "text",IDC_S_TUNNEL_ADDRESS,35,57,70,8
+    LTEXT           "text",IDC_TUNNEL_IP,100,57,100,8
+    GROUPBOX        "",IDC_STATIC,17,89,200,60
+    LTEXT           "text",IDC_S_DATA_OUT,40,109,40,8
+    LTEXT           "text",IDC_DATA_OUT,90,109,90,8,0,WS_EX_RIGHT
+    LTEXT           "text",IDC_S_DATA_IN,40,125,40,8
+    LTEXT           "text",IDC_DATA_IN,90,125,90,8,0,WS_EX_RIGHT
+    DEFPUSHBUTTON   "",IDOK,92,158,50,14
+END
+
+IDD_INFO DIALOGEX 0, 0, 300, 44
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC,7,3,285,35
+    LTEXT           "Static",IDC_MSG,19,18,250,15
+END
+
+IDD_SETUP DIALOGEX 0, 0, 320, 220
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Welcome"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT,0,0,110,183
+    LTEXT           "Welcome to nMatrix Setup Wizard",IDC_TITLE,135,20,170,50
+    LTEXT           "Static",IDC_INFO,127,63,175,100
+    LTEXT           "",IDC_VERSION,209,170,100,12,0,WS_EX_RIGHT
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,113,182,204,1
+    CONTROL         "Debug version",IDC_DEBUG,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_DISABLED | WS_TABSTOP,25,195,70,10
+    PUSHBUTTON      "&Copy Error Message",IDC_COPY_ERR,112,195,90,14,NOT WS_VISIBLE
+    DEFPUSHBUTTON   "&Next",ID_NEXT,203,195,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,255,195,50,14
+    CONTROL         "NDIS 6.0",IDC_NDIS6,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_DISABLED | WS_TABSTOP,123,167,45,10
+END
+
+IDD_DEBUG_TOOL DIALOGEX 0, 0, 300, 268
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Debug Tool"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_REGID,30,20,150,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Get RegID",IDC_GET_REGID,55,41,50,14
+    PUSHBUTTON      "Set RegID",IDC_SET_REGID,105,41,50,14
+    PUSHBUTTON      "Debug",IDC_SHOW_CONSOLE,205,30,60,14
+    PUSHBUTTON      "Reset Adapter",IDC_RESET_ADAPTER,31,83,60,14
+    PUSHBUTTON      "Renew Adapter",IDC_RENEW_ADAPTER,91,83,60,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Install Service",IDC_INSTALL_SERVICE,31,145,60,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Delete Service",IDC_DELETE_SERVICE,91,145,60,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Start Service",IDC_START_SERVICE,151,145,60,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Stop Service",IDC_STOP_SERVICE,211,145,60,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Create Pipe",IDC_CREATE_PIPE,31,192,60,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Start Listen",IDC_START_LISTEN,91,192,60,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Close Pipe",IDC_CLOSE_PIPE,151,192,60,14,NOT WS_VISIBLE
+    GROUPBOX        "",IDC_STATIC,16,7,270,56
+    GROUPBOX        "",IDC_STATIC,16,68,270,55
+    GROUPBOX        "",IDC_STATIC,16,130,270,40
+    GROUPBOX        "",IDC_STATIC,16,177,270,40
+    PUSHBUTTON      "Print Adapter Connection Name",IDC_PRINT_CONN_NAME,151,83,110,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Read",IDC_READ,31,97,60,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Write",IDC_WRITE,91,97,60,14,NOT WS_VISIBLE
+    PUSHBUTTON      "User Mode",IDC_USER_MODE,31,226,60,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Kernel Mode",IDC_KERNEL_MODE,91,226,60,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Query Server Time",IDC_QUERY_TIME,151,97,109,14,NOT WS_VISIBLE
+END
+
+IDD_DLG_SETTINGS DIALOGEX 0, 0, 300, 225
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "",IDOK,190,202,50,14
+    PUSHBUTTON      "",IDCANCEL,240,202,50,14
+    CONTROL         "",IDC_LIST_CATEGORY,"SysListView32",LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_ALIGNLEFT | LVS_NOSCROLL | WS_BORDER | WS_TABSTOP,10,10,50,180,WS_EX_LEFTSCROLLBAR
+END
+
+IDD_ID_LOGIN DIALOGEX 0, 0, 240, 75
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_LOGIN_NAME,95,11,125,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LOGIN_PASSWORD,95,30,125,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "",IDOK,135,56,50,14
+    PUSHBUTTON      "",IDCANCEL,185,56,50,14
+    GROUPBOX        "",IDC_STATIC,5,1,230,50
+    LTEXT           "text",IDC_ACCOUNT,20,14,70,10,0,WS_EX_RIGHT
+    LTEXT           "text",IDC_PASSWORD,20,33,70,10,0,WS_EX_RIGHT
+END
+
+IDD_SETTING_BASIC DIALOGEX 0, 0, 236, 190
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_GROUP,5,1,223,184
+    LTEXT           "text",IDC_GUI_LANG,20,27,70,10
+    COMBOBOX        IDC_COMBO,94,24,86,16,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "text",IDC_S_HOSTNAME,20,46,70,10
+    EDITTEXT        IDC_HOSTNAME,94,43,86,13,ES_AUTOHSCROLL
+    LTEXT           "text",IDC_TUNNELADDRESS,20,66,70,10
+    CONTROL         "",IDC_UDP_TUNNEL_IP,"SysIPAddress32",WS_TABSTOP,94,63,86,13
+    EDITTEXT        IDC_UDP_PORT,184,63,30,13,ES_AUTOHSCROLL | ES_NUMBER,WS_EX_RIGHT
+    CONTROL         "text",IDC_CHECK_AUTOSTART,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,30,107,180,10
+    CONTROL         "text",IDC_CHECK_AUTOUPDATE,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,30,127,180,10
+    CONTROL         "text",IDC_CHECK_AUTO_SETFW,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,30,147,180,10
+    EDITTEXT        IDC_KT_TIME,184,83,15,13,ES_AUTOHSCROLL | ES_NUMBER,WS_EX_RIGHT
+    LTEXT           "text",IDC_S_KT_TIME,20,86,150,10
+END
+
+IDD_SETTING_BANDWIDTH DIALOGEX 0, 0, 236, 190
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_GROUP,5,1,223,184
+    LTEXT           "text",IDC_MAX_OUTGOING,25,26,65,8
+    EDITTEXT        IDC_OUTGOING_RATE,95,23,64,14,ES_AUTOHSCROLL | ES_NUMBER,WS_EX_RIGHT
+    CONTROL         "",IDC_SPIN_DATAOUT,"msctls_updown32",UDS_WRAP | UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,160,23,15,14
+    LTEXT           "KB / s",IDC_STATIC,180,25,19,8
+    LTEXT           "text",IDC_MAX_INGOING,25,47,65,8
+    EDITTEXT        IDC_INGOING_RATE,95,44,64,14,ES_AUTOHSCROLL | ES_NUMBER,WS_EX_RIGHT
+    CONTROL         "",IDC_SPIN_DATAIN,"msctls_updown32",UDS_WRAP | UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,160,44,15,14
+    LTEXT           "KB / s",IDC_STATIC,180,47,19,8
+END
+
+IDD_NETWORK_MANAGE DIALOGEX 0, 0, 281, 300
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_GLOBAL_LOCK,13,8,254,50
+    CONTROL         "",IDC_DISALLOW_USER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,23,170,10
+    LTEXT           "text",IDC_DISALLOW_DESC,25,40,170,10
+    GROUPBOX        "",IDC_NETWORK_PASSWORD,13,65,254,51
+    CONTROL         "",IDC_NEED_PASSWORD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,79,170,10
+    PUSHBUTTON      "",IDC_RESET_PASSWORD,173,95,80,14
+    COMBOBOX        IDC_TYPE_COMBO,13,125,139,12,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "",IDC_QUERY_MEMBERS,173,124,80,14,NOT WS_VISIBLE
+    CONTROL         "",IDC_INFO_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,13,144,254,123
+    PUSHBUTTON      "",IDC_ACT,13,275,50,14
+    DEFPUSHBUTTON   "",IDOK,211,274,50,14
+END
+
+IDD_RESET_NETWORK DIALOGEX 0, 0, 240, 75
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC,5,1,230,50
+    LTEXT           "text",IDC_S_NETWORK_ID,20,14,70,10,0,WS_EX_RIGHT
+    EDITTEXT        IDC_NETWORK_ID,95,11,125,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_VISIBLE
+    LTEXT           "text",IDC_S_NETWORK_PASSWORD,20,33,70,10,0,WS_EX_RIGHT
+    EDITTEXT        IDC_NETWORK_PASSWORD,95,30,125,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "",IDOK,135,56,50,14
+    PUSHBUTTON      "",IDCANCEL,185,56,50,14
+END
+
+IDD_TUNNEL_PATH DIALOGEX 0, 0, 295, 113
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "",IDOK,175,93,50,14
+    PUSHBUTTON      "",IDCANCEL,226,93,50,14
+    CONTROL         "",IDC_PATH_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,6,280,80,WS_EX_RIGHT
+END
+
+IDD_SERVER_MSG DIALOGEX 0, 0, 270, 230
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_WINDOWEDGE
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "",IDOK,200,209,50,14
+    EDITTEXT        IDC_MSG,10,10,250,192,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "",IDC_CLOSE_MSG,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,20,210,130,12
+END
+
+IDD_PING_HOST DIALOGEX 0, 0, 250, 161
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT,0,0,250,135,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+    DEFPUSHBUTTON   "",IDOK,100,140,50,14
+END
+
+IDD_HOST_PICKER DIALOGEX 0, 0, 200, 220
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,83,197,50,14
+    CONTROL         "",IDC_TREE,"SysTreeView32",TVS_CHECKBOXES | TVS_INFOTIP | WS_BORDER | WS_HSCROLL | WS_TABSTOP,14,10,172,177
+    PUSHBUTTON      "Cancel",IDCANCEL,133,197,50,14
+    PUSHBUTTON      "+",IDC_SELECT_ALL,29,197,14,14
+    PUSHBUTTON      "-",IDC_REMOVE_ALL,44,197,14,14
+END
+
+IDD_VNET_GROUP DIALOGEX 0, 0, 270, 95
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_GROUP_NAME,105,30,134,15,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "",IDOK,86,71,50,14
+    PUSHBUTTON      "",IDCANCEL,137,71,50,14
+    LTEXT           "text",IDC_S_GROUP_NAME,29,33,69,12,0,WS_EX_RIGHT
+    GROUPBOX        "",IDC_STATIC,15,14,240,43
+END
+
+IDD_GROUP_MANAGE DIALOGEX 0, 0, 250, 191
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_S_GROUP_NAME,16,11,220,39
+    EDITTEXT        IDC_GROUP_NAME,37,26,100,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "",IDC_RENAME,158,26,60,14
+    GROUPBOX        "",IDC_S_OPTION,16,60,220,96
+    CONTROL         "",IDC_DEF_OFFLINE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,34,76,186,11
+    DEFPUSHBUTTON   "",IDOK,95,166,60,14
+END
+
+IDD_DLGFILETRANS DIALOGEX 0, 0, 320, 321
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,209,300,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,263,300,50,14
+END
+
+IDD_NETWORK_OPTION DIALOGEX 0, 0, 281, 103
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "",IDOK,217,77,50,14
+    GROUPBOX        "",IDC_GROUP_RH,13,13,254,51
+    CONTROL         "",IDC_ALLOW_RELAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,28,29,170,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_CREATE_SUBNET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 253
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_JOIN_SUBNET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 253
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_CHAT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 333
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 218
+    END
+
+    IDD_HOSTINFODIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 173
+    END
+
+    IDD_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 37
+    END
+
+    IDD_SETUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 213
+    END
+
+    IDD_DEBUG_TOOL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 261
+    END
+
+    IDD_DLG_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 218
+    END
+
+    IDD_ID_LOGIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 68
+    END
+
+    IDD_SETTING_BASIC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 183
+    END
+
+    IDD_SETTING_BANDWIDTH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 183
+    END
+
+    IDD_NETWORK_MANAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 293
+    END
+
+    IDD_RESET_NETWORK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 68
+    END
+
+    IDD_TUNNEL_PATH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 288
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 106
+    END
+
+    IDD_SERVER_MSG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 223
+    END
+
+    IDD_PING_HOST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_HOST_PICKER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 213
+    END
+
+    IDD_VNET_GROUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_GROUP_MANAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+    END
+
+    IDD_DLGFILETRANS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 314
+    END
+
+    IDD_NETWORK_OPTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 96
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TREE_CLOSED         BITMAP                  "res\\tree_closed.bmp"
+IDB_TREE_OPENED         BITMAP                  "res\\tree_opened.bmp"
+IDB_EVA                 BITMAP                  "res\\eva.bmp"
+IDB_CLOUD               BITMAP                  "res\\cloud.bmp"
+IDB_GROUP               BITMAP                  "res\\group.bmp"
+IDB_GROUP2              BITMAP                  "res\\group2.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINMENU MENU 
+BEGIN
+    POPUP "450"
+    BEGIN
+        MENUITEM "451",                         ID_SYSTEM_SETTINGS
+        MENUITEM "text",                        ID_SYSTEM_SETLOGINACCOUNT
+        MENUITEM SEPARATOR
+        MENUITEM "452",                         ID_SYSTEM_EXIT
+    END
+    POPUP "453"
+    BEGIN
+        MENUITEM "454",                         ID_NETWORK_CREATENETWORK
+        MENUITEM "455",                         ID_NETWORK_JOINNETWORK
+        MENUITEM SEPARATOR
+        MENUITEM "456",                         ID_SWITCH_NETWORK_LOCATION
+    END
+    POPUP "456"
+    BEGIN
+        MENUITEM "457",                         ID_HELP_CHECKUPDATE
+        MENUITEM SEPARATOR
+        MENUITEM "458",                         ID_HELP_SERVERNEWS
+        MENUITEM "459",                         ID_HELP_WEBSITE
+        MENUITEM SEPARATOR
+        MENUITEM "460",                         ID_HELP_UNINSTALLADAPTERDRIVER
+        MENUITEM SEPARATOR
+        MENUITEM "461",                         ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RCDATA
+//
+
+IDR_DRIVER32            RCDATA                  "res\\x32.sys"
+IDR_INF_FILE            RCDATA                  "res\\DriverInf"
+IDR_DRIVER64            RCDATA                  "res\\x64.sys"
+IDR_DEVINS32            RCDATA                  "res\\DevIns32.exe"
+IDR_DEVINS64            RCDATA                  "res\\DevIns64.exe"
+IDR_DRIVER64D           RCDATA                  "res\\x64d.sys"
+IDR_DRIVER32D           RCDATA                  "res\\x32d.sys"
+IDR_LAN_CHT             RCDATA                  "res\\lan_cht.dat"
+IDR_CAT_X32             RCDATA                  "res\\x32.cat"
+IDR_CAT_X32D            RCDATA                  "res\\x32d.cat"
+IDR_CAT_X64             RCDATA                  "res\\x64.cat"
+IDR_CAT_X64D            RCDATA                  "res\\x64d.cat"
+IDR_LAN_CHS             RCDATA                  "res\\lan_chs.dat"
+IDR_NTOOL               RCDATA                  "res\\nTool.exe"
+IDR_INF_FILE_N6         RCDATA                  "res\\DriverInfN6"
+IDR_DRIVER32_N6         RCDATA                  "res\\x32n6.sys"
+IDR_DRIVER64_N6         RCDATA                  "res\\x64n6.sys"
+IDR_CAT_X64N6           RCDATA                  "res\\x64n6.cat"
+IDR_CAT_X32N6           RCDATA                  "res\\x32n6.cat"
+#endif    // Chinese (Taiwan) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 192, 202
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,17,140,20,20
+    LTEXT           "",IDC_VERSION,50,138,125,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2012 DigiStar Studio.",IDC_STATIC,50,152,114,8
+    DEFPUSHBUTTON   "",IDOK,75,175,50,14,WS_GROUP
+    CONTROL         "",IDC_D3DVIEW,"Static",SS_OWNERDRAW,0,0,192,121
+END
+
+IDD_VPNCLIENT_DIALOG DIALOGEX 0, 0, 182, 277
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_ACCEPTFILES | WS_EX_APPWINDOW
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "",IDC_LOGIN,12,9,32,26
+    CONTROL         "",IDC_NET_TREE,"SysTreeView32",TVS_LINESATROOT | TVS_SHOWSELALWAYS | TVS_NOHSCROLL | TVS_INFOTIP | WS_BORDER | WS_TABSTOP,7,43,168,211
+    LTEXT           "192.168.255.255",IDC_VIP,53,23,100,10
+    LTEXT           "HostName",IDC_HOSTNAME,53,12,100,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 185
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_VPNCLIENT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 175
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 270
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,9,580,0
+ PRODUCTVERSION 0,9,580,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "DigiStar Studio"
+            VALUE "FileDescription", "nMatrix VPN Client App"
+            VALUE "FileVersion", "0, 9, 580, 0"
+            VALUE "InternalName", "nMatrix.exe"
+            VALUE "LegalCopyright", "DigiStar studio All rights reserved."
+            VALUE "OriginalFilename", "nMatrix.exe"
+            VALUE "ProductName", "nMatrix"
+            VALUE "ProductVersion", "0.9.580 (beta)"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUT               "About nMatrix"
+    IDS_USE_LOGIN_ACCOUNT   "Use &Account Login"
+    IDS_SET_LOGIN_ACCOUNT   "Set Login &Account"
+    IDS_VERSION_FORMAT      "nMatrix Client Version %d.%d.%d"
+    IDS_CREATE_NETWORK      "Create a new network"
+    IDS_JOIN_NETWORK        "Join an existing network"
+    IDS_NETWORK_ID          "Network ID"
+    IDS_NETWORK_PASSWORD    "Network Password"
+    IDS_SUBGROUP            "Subgroup"
+    IDS_OK                  "&OK"
+    IDS_CANCEL              "&Cancel"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_INVITE              "&Invite"
+    IDS_EXIT                "Exit"
+    IDS_LOGIN               "Login"
+    IDS_LOGOUT              "Logout"
+    IDS_CREATE              "Create"
+    IDS_JOIN                "Join"
+    IDS_ACCOUNT             "Account"
+    IDS_PASSWORD            "Password"
+    IDS_START               "Online"
+    IDS_TURNOFF             "Offline"
+    IDS_NEXT                "&Next"
+    IDS_REMOVE              "&Remove"
+    IDS_CLOSE               "&Close"
+    IDS_USE                 "&Use"
+    IDS_TYPE                "Type"
+    IDS_NETWORK_ADM         "Network Adm"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SETTINGS            "Settings"
+    IDS_BASIC               "Basic"
+    IDS_BANDWIDTH           "Bandwidth"
+    IDS_GUI_LANG            "GUI Language"
+    IDS_LOCAL_NAME          "Local Name"
+    IDS_UDP_TUNNEL_ADDRESS  "UDP Tunnel Address"
+    IDS_AUTOSTART           "Auto start when windows start (Windows Service)"
+    IDS_RECONNECT           "Re-connect to server when disconnected"
+    IDS_AUTOUPDATE          "Auto check for updates"
+    IDS_AUTO_SETFW          "Auto config windows firewall"
+    IDS_KT_TIME             "Keep tunnels when lost connection (minutes) :"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MAX_INGOING         "Max ingoing data :"
+    IDS_MAX_OUTGOING        "Max outgoing data :"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_NETWORK_MANAGEMENT  "Network Management"
+    IDS_GLOBAL_LOCK         "Global Lock"
+    IDS_DISALLOW_NEW_USER   "&Disallow new users to join."
+    IDS_DISALLOW_DESC       "Don't accept new members if the option is checked."
+    IDS_VALIDATE_PASSWORD   "&Validate password when users join."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_RESET_PASSWORD      "Reset &Password"
+    IDS_RELAY_HOST          "Relay Host"
+    IDS_ALLOW_RELAY         "&Allow relay for the network."
+    IDS_RESET_ID_PASSWORD   "Reset Network ID and Password"
+    IDS_MEMBER_INFO         "Member Information"
+    IDS_LAST_ONLINE_IP      "Last Online IP"
+    IDS_LAST_ONLINE_TIME    "Last Online Time (yyyy-mm-dd)"
+    IDS_STATUS              "Status"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ACTIVATE            "Activate"
+    IDS_DEACTIVATE          "Deactivate"
+    IDS_ACTIVE              "Active"
+    IDS_DEACTIVE            "Deactive"
+    IDS_COLON               " : "
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TUNNEL_PATH         "Tunnel Path"
+    IDS_NODE                "Node"
+    IDS_NETWORK_GROUP       "Network Group"
+    IDS_P2P                 "P2P"
+    IDS_RELAY               "Relay"
+    IDS_NMATRIX_SERVER      "nMatrix Server"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SERVER_NEWS         "nMatrix Server News"
+    IDS_DONT_SHOW           "&Don't show this again."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_HUB_CLIENT          "Hub client"
+    IDS_SPOKE_CLIENT        "Spoke client"
+    IDS_HOST_INFO           "Host Information"
+    IDS_HOST_NAME           "Host Name"
+    IDS_VIRTUAL_IP          "Virtual IP"
+    IDS_TUNNEL_ADDRESS      "Tunnel Address"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_DATA_IN             "Data In"
+    IDS_DATA_OUT            "Data Out"
+    IDS_NO_DATA             "No data available."
+    IDS_QUERY               "Query"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_OFFLINE             "Offline"
+    IDS_NO_CONNECTION       "No connection"
+    IDS_NO_TUNNEL           "No tunnel available"
+    IDS_TRYING_TPT          "Detecting..."
+    IDS_RELAYED_TUNNEL      "Relayed Tunnel"
+    IDS_DIRECT_TUNNEL       "Direct Tunnel"
+    IDS_CONNECTING          "Connecting"
+    IDS_ONLINE              "Online"
+    IDS_GO_ONLINE           "Go &Online"
+    IDS_GO_OFFLINE          "Go &Offline"
+    IDS_LEAVE_NETWORK       "&Leave Network"
+    IDS_DELETE_NETWORK      "&Delete Network"
+    IDS_MANAGE              "&Manage"
+    IDS_SET_SPOKE           "Set as &Spoke Client"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SET_HUB             "Set as &Hub Client"
+    IDS_SET_RELAY           "Set as &Relay Host"
+    IDS_CANCEL_RELAY        "&Cancel this Relay Host"
+    IDS_EVICT               "&Evict"
+    IDS_PING_HOST           "Measure the Round-trip &Time"
+    IDS_SEND_MESSAGE        "Send &Messages"
+    IDS_COPY_ADDRESS        "&Copy IP Address"
+    IDS_WIN_REMOTE_DESKTOP  "&Windows Remote Desktop"
+    IDS_EXPLORE_HOST        "&Explore this Host"
+    IDS_APPMODE             "App Mode"
+    IDS_SERVICEMODE         "Service Mode"
+    IDS_INVITE_GROUPCHAT    "&Invite to group chat"
+    IDS_SELECT_MEMBERS      "Select members"
+    IDS_GROUP_MSG           "Group Chat"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING450           "&System"
+    IDS_STRING451           "&Settings"
+    IDS_STRING452           "E&xit"
+    IDS_STRING453           "&Network"
+    IDS_STRING454           "&Create a new network"
+    IDS_STRING455           "&Join an existing network"
+    IDS_STRING456           "&Help"
+    IDS_STRING457           "Check for &Updates"
+    IDS_STRING458           "nMatrix &Server News"
+    IDS_STRING459           "&Visit nMatrix Website"
+    IDS_STRING460           "&Uninstall Adapter Driver"
+    IDS_STRING461           "&About nMatrix"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING1504          "The version of the service executable file is newer!"
+    IDS_STRING1505          "Failed to query external address!"
+    IDS_STRING1506          "Register ID expired! Discard it now?"
+    IDS_STRING1507          "Delete network ""%s"" ?"
+    IDS_STRING1508          "Exit from network ""%s"" ?"
+    IDS_STRING1509          "Remove user ""%s"" from network ""%s"" ?"
+    IDS_STRING1510          "Please restart nMatrix to apply a new settings."
+    IDS_STRING1511          "Initializing nMatrix Service. Please wait..."
+    IDS_STRING1512          "Updating nMatrix service. Please wait..."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING1500          "Unsupported client version! Please update the software."
+    IDS_STRING1501          "Virtual Adapter driver is newer and incompatible version!"
+    IDS_STRING1502          "Updating nMatrix network adapter driver. Please wait..."
+    IDS_STRING1503          "Updating virtual adapter configuration, please wait..."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_UNKNOW_ERROR        "Unknow Error!"
+    IDS_NO_VNET             "The network doesn't exist!"
+    IDS_PASSWORD_ERROR      "Password error!"
+    IDS_HAS_JOINED          "Already joined!"
+    IDS_LOCKED_VNET         "The network has been locked by the adm!"
+    IDS_VNET_ID_EXISTED     "Netword ID has existed!"
+    IDS_STRING_LEN_ERROR    "Invalid string length!"
+    IDS_INPUT_VNET_ID       "Network ID can't be null!"
+    IDS_MAX_VNET_ID_LEN     "Max length of a network id is %d!"
+    IDS_INPUT_PASSWORD      "Password can't be null!"
+    IDS_MAX_PASSWORD_LEN    "Max length of a password is %d!"
+    IDS_SERVER_NO_RESPONSE  "Server no response! Please try again later."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CREATE_SUBGROUP     "Create a subgroup"
+    IDS_DELETE_SUBGROUP     "Delete the subgroup"
+    IDS_RENAME              "Rename"
+    IDS_SET_DEFAULT_SUBGROUP "Set as default subgroup"
+    IDS_MOVE_TO             "Move to"
+    IDS_SUBGROUP_NAME       "Subgroup Name"
+    IDS_SUBGROUP_SETTING    "Subgroup Setting"
+    IDS_DISABLE_SUBGROUP    "Disable connections in the subgroup"
+    IDS_DEFAULT_GROUP       "Unclassified"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\VPNClient.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
